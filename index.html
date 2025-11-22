@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Revista - Portada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#100d09; /* navy */
+      --card:#131602;
+      --muted:#94a3b8;
+      --accent:#fbfbfb; /* red */
+      --glass: rgba(50, 50, 143, 0.03);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#edaa19);
+      color:#2f79d4;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:24px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#132cb7);display:flex;align-items:center;justify-content:center;font-weight:800;color:rgb(6, 1, 1);
+      box-shadow:0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:rgb(0, 0, 0)}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:24px;margin-bottom:28px;align-items:start;
+    }
+    .hero-article{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;padding:30px;padding-bottom:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6);
+      overflow:hidden;border:1px solid rgba(255,255,255,0.03);
+    }
+    .hero-article img{width:100%;height:340px;object-fit:cover;border-radius:20px}
+    .kicker{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;font-size:12px;margin-top:12px}
+    .title{font-size:30px;font-weight:800;margin:20px 0}
+    .excerpt{color:var(--muted);line-height:1.5}
+
+    .sidebar{background:var(--card);padding:16px;border-radius:12px;height:100%;min-height:220px}
+    .widget h4{margin:0 0 10px 0}
+    .list {display:flex;flex-direction:column;gap:12px}
+    .small-card{display:flex;gap:12px;align-items:center}
+    .small-card img{width:72px;height:56px;object-fit:cover;border-radius:8px}
+    .small-card .meta{font-size:13px;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px 0;font-size:16px}
+    .card p{color:var(--muted);font-size:14px}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center;padding:18px}
+
+    /* responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      main{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      body{padding:18px}
+      header{flex-direction:column;align-items:flex-start}
+      nav a{margin-left:10px}
+      main{grid-template-columns:1fr}
+      .hero-article img{height: 300px}
+    }
+
+    /* download button */
+    .download{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:700;cursor:pointer}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">guana</div>
+        <div>
+          <div style="font-weight:800;font-size:18px">La joya escondida playa vicente</div>
+          <div style="color:var(--muted);font-size:13px">Conoce las tradiciones de playa vicente</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <button class="download" onclick="downloadHTML()"></button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <article class="hero-article">
+        <img src="iguana.jpg" alt="Portada">
+        <div class="kicker">Edición Noviembre 2025</div>
+        <h1 class="title">Recordemos nuestras raisez</h1>
+        <p class="excerpt">Indagamos las diferentes culturas, tradiciones, de las diversas culturas de playa vicente veracruz</p>
+      </article>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h4></h4>
+
+          <div class="list">
+            <div class="small-card">
+              <img src="tema 1.jpg" alt="">
+              <div>
+                <div style="font-weight:700">La precencia historica de los pueblos originarios 
+                  <a href="tema 1.html">Haz clic aquí para ir a la página</a>
+                </div>
+                <div class="meta"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="small-card">
+                <img src="tema 2.jpg">-
+                <div>
+                  <div style="font-wenght:700">Codigos culturales de los pueblos originarios
+                    <a href="tema 2.html">Haz clic aquí para ir a la página</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="small-card">
+                <img src="pajina 1.jpg">
+                <div>
+                  <div style="font-wenght:700">divercidad regional de playa vicente
+                    <a href="tema 3.html">Haz clic aquí para ir a la página</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="small-card">
+              <img src="tema 4.jpg" alt="">
+              <div>
+                <div style="font-weight:700">concecuencias de la transformacion de los pueblos originarios por causa de la historia
+                  <a href="tema 4 rr.html">Haz clic aquí para ir a la página</a>
+                </div>
+                <div class="meta"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div style="height:12px"></div>
+        <div class="widget">
+          <h4></h4>
+          <p class="meta">echo por alumnos de la UBBJ</p>
+          <form onsubmit="event.preventDefault();alert('¡Gracias! (este es un demo)')">
+           
+            <button style="width:100%;padding:10px;border-radius:8px;border:0;background:linear-gradient(90deg,var(--accent),#f97316);color:white;font-weight:700">conoce playa
+              <div class="box">
+        <a href="https://www.facebook.com/search/top?q=descubre%20playa%20vicente&locale=es_LA">Ir ahora</a>
+    </div>
+            </button>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+   
+    <footer>
+      &copy; <span id="year"></span> ¡Gracias · <span style="color:var(--muted)">Hecho en línea</span>
+    </footer>
+  </div>
+
+  
+</body>
+</html>
